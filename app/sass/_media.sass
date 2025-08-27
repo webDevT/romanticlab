@@ -1,0 +1,258 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1650px)
+	/**/
+	.hero:after 
+		transform: translateY(145px) translateX(-50%)
+	.hero-wrapper
+		padding-bottom: 157px
+	.hero__illustration
+		bottom: -145px
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+	.hero__illustration-item
+		width: 29.5vw 
+		height: 36.9vw
+		border-radius: 12.6vw 3.4vw
+	.hero__title
+		font-size: 50px
+	.hero__content-wrapper 
+		width: 530px
+	.hero__text
+		font-size: 18px
+		width: 300px
+	.hero 
+		padding-top: 26vw
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	.hero__illustration
+		position: static
+	.hero__illustration-item:nth-child(2)
+		margin-left: 0
+		margin-top: 0
+	.hero__content-wrapper
+		width: 100%
+	.hero__title
+		text-align: center
+	.hero
+		padding-top: 140px
+	.hero__illustration
+		display: flex
+		flex-direction: row-reverse
+		justify-content: center
+		padding-top: 5vw
+	.hero__illustration-item
+		width: 44.27vw
+		height: 55.2vw
+		border-radius: 17.6vw 4.8vw 17.6vw 4.8vw
+	.hero__illustration-item:nth-child(2)
+		margin-top: 11.73vw
+		transform: translateX(5vw)
+	.hero__illustration-item:first-child
+		transform: translateX(-5vw)
+	.hero__text
+		width: 100% 
+		text-align: center
+	.hero__content-wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+	.hero__text
+		margin-top: 5vw
+	.hero::after
+		height: 120%
+		transform: translateY(8vw) translateX(-50%)
+	.hero-wrapper
+		padding-bottom: 8vw
+	.hero__title-accent 
+		display: block
+	.hero__title-accent::before
+		background-size: 260px
+	.hero__title
+		font-size: 54px
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+	//start header style
+	.header
+		.container
+			position: relative
+	.header__menu-button
+		display: block
+	.header__menu-row	
+		width: 30px
+		height: 3px
+		margin-bottom: 5px
+		border-radius: 20px
+		background-color: $font-color
+		transition: all 0.3s ease
+	.header__menu-row:last-child 
+		margin-bottom: 0
+	.header__menu
+		display: none
+	.header__menu-button.active
+		.header__menu-row:nth-child(1)
+			transform: rotate(45deg)
+			position: relative
+			top: 5px
+		.header__menu-row:nth-child(2)
+			display: none
+		.header__menu-row:nth-child(3)
+			transform: rotate(-45deg)
+			position: relative
+			top: -2px
+	.header 
+		z-index: 999
+	.header.active
+		.container
+			background: rgba(255,255,255,1)
+			border-bottom-left-radius: 0
+			border-bottom-right-radius: 0
+			border-top-left-radius: 30px
+			border-top-right-radius: 30px
+			border: none
+	.header__menu.active
+		display: block
+		position: absolute
+		position: absolute 
+		top: 100%
+		left: 0
+		width: 100% 
+		background: rgba(255,255,255,1)
+		z-index: 99
+		padding-bottom: 60px
+		border-bottom-left-radius: 30px
+		border-bottom-right-radius: 30px
+	.header__menu-list 
+		flex-direction: column
+	.header__menu-list .header__menu-item 
+		margin-left: 0
+		margin-top: 30px 
+	//end header style
+	
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 530px)
+	/**/
+	//start global style 
+	body 
+		font-size: 5.33vw
+	.button 
+		padding: 2.4vw 6.67vw
+		font-size: 4.8vw
+		img 
+			width: 9.07vw
+			margin-left: 3vw
+	//end global style 
+
+	//start header style
+	.header 
+		top: 0
+		padding: 8.53vw 0
+		.container
+			padding: 4vw 7vw
+	.header__logo
+		img
+			width: 58vw
+	.header__menu-row
+		width: 7vw
+		height: 0.8vw
+		margin-bottom: 1.2vw
+		border-radius: 1.2vw
+	.header__menu-button.active
+		.header__menu-row:nth-child(1)
+			top: 1vw
+		.header__menu-row:nth-child(3)
+			top: -0.8vw
+	.header.active
+		.container
+			border-top-left-radius: 5vw
+			border-top-right-radius: 5vw
+	.header__menu.active
+		padding-bottom: 12vw
+		border-bottom-left-radius: 5vw
+		border-bottom-right-radius: 5vw
+	.header__menu-list .header__menu-item 
+		margin-top: 5vw 
+	//end header style
+
+	//start hero style 
+	.hero
+		padding-top: 38.4vw
+	.hero__title 
+		font-size: 10.67vw
+	.hero__title-accent
+		display: block	
+	.hero__title-accent::before
+		width: 100%
+		margin-left: auto
+		margin-right: auto
+		background-size: 61.33vw
+	.hero__text
+		font-size: 6.4vw
+		margin-bottom: 4.27vw
+		p 
+			margin-top: 0 
+			margin-bottom: 0
+	.hero 
+		.button 
+			width: 100%
+			justify-content: center
+	.hero__safe
+		margin-top: 4.27vw
+		font-size: 4.27vw
+	//end hero style
+	
+	.cta 
+		display: none
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+	.header__menu
+		display: block
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
+
+
+
+

@@ -1,0 +1,242 @@
+@import "vars"
+@import "fonts"
+
+//start global style
+body *
+    box-sizing: border-box
+body
+    background-color: $background-color
+    padding: 0 
+    margin: 0
+    font-family: $main-font
+    font-size: $font-size
+    font-weight: $font-weight
+    line-height: $line-height
+    color: $font-color
+    min-height: 2000px
+.container 
+    width: $container-width
+    margin: 0 auto
+    max-width: 91.47vw
+.button 
+    background: $blue
+    color: #fff
+    font-size: 18px
+    text-decoration: none
+    font-weight: 700
+    padding: 7.5px 23px
+    display: inline-flex
+    align-items: center
+    border-radius: 1000px
+    box-shadow: 4px 4px 50px 0 rgba(228, 122, 124, 0.29)
+    transition: all 0.3s ease
+    img 
+        margin-left: 17px
+.button:hover 
+    background: #fff
+    color: $blue
+    box-shadow: 4px 4px 50px 0 rgba(228, 122, 124, 0.8)
+.button--white
+    background: #fff
+    color: $blue
+.button--white:hover 
+    background: $blue
+    color: #fff
+    box-shadow: 0px 0px 10px 0 rgba(255, 255, 255, 0.8)
+//end global style
+
+//start header style
+.header
+    padding: 0px 0
+    position: absolute 
+    top: 32px
+    left: 0
+    width: 100%
+    z-index: 100
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: $header-container-width
+        max-width: 89.87vw
+        padding: 11.6px 37px
+        border-radius: 80px
+        border: 1px solid rgba(255, 255, 255, 0.63)
+        background: rgba(255, 255, 255, 0.50)
+        backdrop-filter: blur(30px)
+.header__menu-list
+    display: flex
+    align-items: center
+    list-style: none
+    margin: 0
+    padding: 0
+    .header__menu-item
+        margin-left: 44px
+        a
+            text-decoration: none
+            color: $font-color
+            font-size: 18px
+            font-weight: 400
+            line-height: 140%
+            text-transform: uppercase
+            text-transform: capitalize
+            &:hover
+                color: $secondary-color
+.header__logo
+    display: flex 
+    align-items: center 
+//end header style
+
+//start hero style
+.hero-wrapper
+    position: relative
+    overflow: hidden
+    padding-bottom: 8vw
+.hero 
+    padding-top: 230px
+    padding-bottom: 0px
+    background: linear-gradient(255deg, #E3F3F5 16.48%, #EDE4E2 38.74%, #FBD1D1 61.34%, #FBEBD9 85.59%)
+    position: relative
+    &::after
+        content: ''
+        position: absolute
+        bottom: 0px
+        left: 50%
+        min-width: 133.33vw
+        width: 1920px
+        height: 1000px
+        background: inherit
+        transform: translateY(8vw) translateX(-50%)
+        border-radius: 0 0 45% 45%
+.hero__content
+    z-index: 101
+    position: relative
+.hero__title
+    font-size: 64px
+    font-weight: 700
+    font-family: $secondary-font
+    line-height: 110%
+    max-width: 100%
+    margin-bottom: 0 
+    margin-block: 0
+.hero__title-accent
+    font-weight: 400
+    font-style: italic
+    position: relative
+    z-index: 12
+.hero__title-accent::before
+    content: ''
+    position: absolute
+    top: 85%
+    left: 0
+    width: 100%
+    height: 19px
+    background: url(../img/lines.svg) no-repeat center center
+    background-size: 100%
+    z-index: -1
+    pointer-events: none
+.photo-masked
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        border-radius: 150px 40px
+        background: linear-gradient(184deg, rgba(243, 183, 185, 0.00) 32.62%, rgba(228, 120, 122, 0.91) 89.56%)
+        pointer-events: none
+        mask: url(#photoMask)
+        -webkit-mask: url(#photoMask)
+.hero .container 
+    position: relative 
+.hero__illustration 
+    position: absolute 
+    right: 0 
+    bottom: -8.1vw
+.hero__illustration-item:nth-child(2)
+    margin-top: -50%
+    margin-left: -209px
+.hero__content-wrapper
+    width: 697px 
+.hero__text 
+    width: 461px
+    max-width: 100%
+    font-size: 32px
+    line-height: 140%
+    margin-bottom: 32px
+.hero__safe
+    font-size: 16px 
+    font-weight: 500
+    margin-top: 44px
+.hero__illustration-item-img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: center
+.hero__illustration-item
+    width: 351px 
+    height: 440px
+    border-radius: 150px 40px 150px 40px
+    overflow: hidden
+    position: relative
+.hero__illustration-item:first-child::after 
+    content: ''
+    width: 100% 
+    height: 100% 
+    background: linear-gradient(184deg, rgba(243, 183, 185, 0.00) 32.62%, rgba(228, 120, 122, 0.91) 89.56%)
+    z-index: 11
+    position: absolute 
+    top: 0
+    left: 0
+.hero__illustration-item:nth-child(2)
+    z-index: 100
+.hero__illustration-item:nth-child(2)::after
+    content: ''
+    width: 100% 
+    height: 100%
+    background: linear-gradient(188deg, rgba(243, 183, 185, 0.00) 50.52%, rgba(228, 120, 122, 0.66) 95.74%)
+    z-index: 11
+    position: absolute 
+    top: 0
+    left: 0
+//end hero style
+
+//start cta style
+.cta-section
+    display: flex
+    justify-content: center
+    position: relative
+    
+    &.sticky
+        position: fixed
+        bottom: 0
+        left: 0
+        width: 100%
+        z-index: 1000
+.cta 
+    z-index: 999
+    display: inline-flex 
+    align-items: center
+    border-radius: 80px
+    background: #FE6263
+    margin-left: auto 
+    margin-right: auto
+    transform: translateY(-50%)
+    box-shadow: 0 0 10px 0 rgba(223, 83, 51, 0.43), -10px -5px 93.2px 0 rgba(255, 170, 130, 0.37)
+    padding: 10px 20px
+    .cta__title
+        font-size: 24px
+        font-weight: 700
+        color: #fff
+        margin-right: 20px
+.cta__title
+    font-size: 30px 
+    font-weight: 600
+
+//end cta style
+
+@import "media"
+
+
+
