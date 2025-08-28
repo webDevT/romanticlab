@@ -14,6 +14,9 @@ body
     line-height: $line-height
     color: $font-color
     min-height: 2000px
+p 
+    margin-top: 0 
+    margin-bottom: 0
 .container 
     width: $container-width
     margin: 0 auto
@@ -43,6 +46,26 @@ body
     background: $blue
     color: #fff
     box-shadow: 0px 0px 10px 0 rgba(255, 255, 255, 0.8)
+.h2
+    font-size: 56px
+    font-weight: 700
+    line-height: 120%
+    font-family: $secondary-font
+    text-align: center
+    padding-bottom: 34px
+    background: url(../img/lines2.svg) no-repeat bottom center
+    margin-top: 0 
+    margin-bottom: 0
+.h3
+    color: $titles-color
+    text-align: center
+    font-family: $secondary-font
+    font-size: 44px
+    font-style: italic
+    font-weight: 700
+    line-height: 120%
+    margin-top: 0 
+    margin-bottom: 0
 //end global style
 
 //start header style
@@ -207,6 +230,7 @@ body
     display: flex
     justify-content: center
     position: relative
+    transition: opacity 0.3s ease-in-out
     
     &.sticky
         position: fixed
@@ -214,6 +238,10 @@ body
         left: 0
         width: 100%
         z-index: 1000
+        
+    &.hidden
+        opacity: 0
+        pointer-events: none
 .cta 
     z-index: 999
     display: inline-flex 
@@ -233,8 +261,230 @@ body
 .cta__title
     font-size: 30px 
     font-weight: 600
-
 //end cta style
+
+//start features-section style
+.features-section
+    padding-top: 75px
+    padding-bottom: 159px
+    .h2 
+        margin-bottom: 50px
+.features
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    padding-top: 220px
+    .features__item
+        width: 32%
+        text-align: center
+        display: flex 
+        justify-content: center
+        flex-direction: column
+        .h3
+            margin-top: 22px 
+            margin-bottom: 16px
+        .features__item-image
+            width: 365px
+            height: 432px
+            object-fit: cover
+            overflow: hidden
+            border-radius: 150px 40px 150px 40px
+            position: relative
+            margin-left: auto 
+            margin-right: auto
+            max-width: 100%
+            img 
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: center
+.features__item-image:after 
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(188deg, rgba(243, 183, 185, 0.00) 50.52%, rgba(228, 120, 122, 0.66) 95.74%)
+.features__item:nth-child(2)
+    margin-top: -220px
+//end features-section style
+
+//start priorities section style
+.priorities__illustration
+    width: 558px
+    max-width: 50%
+    img 
+        max-width: 100%
+.priorities__item
+    display: flex
+    align-items: center
+    margin-top: 60px
+.priorities__content
+    width: 50%
+    text-align: left
+    .h3 
+        text-align: left
+.priorities__content-wrapper
+    width: 464px 
+    max-width: 100%
+    margin-left: auto 
+.priorities__item--reverse
+    .priorities__content-wrapper
+        margin-left: 0
+        margin-right: auto
+.priorities
+    position: relative
+    overflow: hidden
+    padding-bottom: 226px
+    
+    &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 50%
+        width: 1920px
+        min-width: 133.33vw
+        height: 70%
+        background: linear-gradient(180deg, rgba(227, 243, 245, 0) 1.44%, #FEF4EA 21.22%, rgba(227, 243, 245, 0.38) 32.83%, #EDE4E2 51.32%, #FBD1D1 72.19%, #FBEBD9 100%)
+        transform: translateX(-50%)
+        border-radius: 0 0 50% 50%
+        z-index: -1 
+.priorities__item
+    .h3 
+        margin-bottom: 16px  
+//end priorities section style
+
+//start reviews section style
+.reviews
+    padding-top: 100px
+    padding-bottom: 100px
+    .h2 
+        margin-bottom: 50px
+    .reviews__item
+        display: flex
+        width: 32%
+.reviews__list
+    display: flex 
+    justify-content: space-between
+    align-items: flex-start
+.reviews__item-content
+    border-radius: 40px 150px
+    border: 1px solid rgba(122, 89, 102, 0.04)
+    background: #FE6263
+    width: 100%
+    padding: 32px 40px
+    color: #fff
+.reviews__header 
+    display: flex 
+    align-items: center
+    margin-bottom: 16px
+.reviews__header-image
+    width: 84px 
+    min-width: 84px
+    height: 84px
+    border-radius: 50%
+    overflow: hidden
+    margin-right: 16px
+    img 
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+.reviews__header-wrapper
+    display: flex
+.reviews__header-wrapper 
+    margin-bottom: 3px
+    font-size: 16px
+.reviews__header-name
+    margin-right: 7px
+.reviews__header-date 
+    font-weight: 400
+    color: #FEFAF5
+    opacity: 0.8
+.reviews__text
+    text-align: right
+.reviews__item--reverse
+    .reviews__item-content
+        border-radius: 150px 40px 150px 40px
+    .reviews__header
+        display: flex
+        justify-content: flex-end
+    .reviews__text
+        text-align: left
+//end reviews section style
+
+//start footer style
+.footer 
+    text-align: center
+    padding-bottom: 26px
+.footer__menu 
+    display: flex 
+    justify-content: center
+    align-items: center
+    span 
+        width: 3px 
+        height: 3px
+        border-radius: 50%
+        background: #141320
+        margin-left: 16px
+        margin-right: 16px
+        position:  relative
+        top: 2px
+.footer__menu-list 
+    display: flex 
+    justify-content: center 
+    align-items: center
+    list-style: none 
+    padding: 0
+    margin: 0
+.footer__menu-link
+    font-size: 16px 
+    text-decoration: none
+    color: #141320
+    &:hover
+        color: $secondary-color
+.footer__menu-bottom-link 
+    font-size: 16px 
+    color: #2E2323
+    opacity: 0.5
+.footer__menu-bottom 
+    display: flex 
+    align-items: center
+    justify-content: center
+    padding-top: 32px
+    a 
+        text-decoration: none
+    span 
+        width: 3px 
+        min-width: 3px
+        height: 3px
+        background: #2E2323
+        opacity: 0.5
+        display: block 
+        border-radius: 50%
+        margin-left: 7px 
+        margin-right: 7px
+        position: relative
+        top: 2px
+.footer__line
+    width: 400px 
+    height: 1px 
+    background: #2E2323
+    opacity: 0.2
+    margin-left: auto 
+    margin-right: auto
+    margin-top: 32px
+    max-width: 100%
+.footer__copyright 
+    font-size: 16px 
+    line-height: 140%
+    color: #2E2323
+    opacity: 0.5
+    margin-top: 16px
+.footer__logo
+    margin-bottom: 20px
+//end footer style
 
 @import "media"
 
