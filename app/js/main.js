@@ -12,53 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 //end header menu button
 
-//start cta sticky section
+//start faq section
 document.addEventListener('DOMContentLoaded', function() {
-    const ctaSection = document.querySelector('.cta-section');
-    const footer = document.querySelector('footer'); // або '.footer' залежно від вашого класу
-    let isSticky = false;
-    let originalTop = 0;
-    let lastScrollTop = 0;
+    const faqItems = document.querySelectorAll('.faq__item-header');
     
-    // Get the original position when page loads
-    window.addEventListener('load', function() {
-        originalTop = ctaSection.offsetTop;
-    });
-    
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const windowHeight = window.innerHeight;
-        const sectionHeight = ctaSection.offsetHeight;
-        
-        // Calculate when section should become sticky (when bottom of section reaches bottom of viewport + extra offset)
-        const stickyPoint = originalTop + sectionHeight - windowHeight + 200;
-        
-        // Check if user has reached the footer
-        const footerTop = footer ? footer.offsetTop : document.documentElement.scrollHeight;
-        const isAtFooter = scrollTop + windowHeight >= footerTop - 50; // 50px threshold
-        
-        // Check scroll direction
-        const isScrollingUp = scrollTop < lastScrollTop;
-        
-        if (scrollTop >= stickyPoint && scrollTop > 100 && !isSticky && !isAtFooter) {
-            // Make it sticky
-            ctaSection.classList.add('sticky');
-            ctaSection.classList.remove('hidden');
-            isSticky = true;
-        } else if (isAtFooter && isSticky && !isScrollingUp) {
-            // Hide when at footer and scrolling down
-            ctaSection.classList.add('hidden');
-        } else if (isAtFooter && isSticky && isScrollingUp) {
-            // Show when at footer and scrolling up
-            ctaSection.classList.remove('hidden');
-        } else if ((scrollTop < stickyPoint || scrollTop <= 100) && isSticky && !isAtFooter) {
-            // Return to original position
-            ctaSection.classList.remove('sticky');
-            ctaSection.classList.remove('hidden');
-            isSticky = false;
-        }
-        
-        lastScrollTop = scrollTop;
+    faqItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            const faqItem = this.closest('.faq__item');
+            const faqContent = faqItem.querySelector('.faq__item-content');
+            faqItem.classList.toggle('active');
+            faqContent.classList.toggle('active');
+        });
     });
 });
-//end cta sticky section
+//end faq section
+

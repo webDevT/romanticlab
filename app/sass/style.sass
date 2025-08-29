@@ -13,7 +13,6 @@ body
     font-weight: $font-weight
     line-height: $line-height
     color: $font-color
-    min-height: 2000px
 p 
     margin-top: 0 
     margin-bottom: 0
@@ -66,6 +65,8 @@ p
     line-height: 120%
     margin-top: 0 
     margin-bottom: 0
+.h1 
+    text-align: center
 //end global style
 
 //start header style
@@ -95,6 +96,9 @@ p
     padding: 0
     .header__menu-item
         margin-left: 44px
+        &.active
+            a
+                color: $secondary-color
         a
             text-decoration: none
             color: $font-color
@@ -188,6 +192,7 @@ p
     font-size: 32px
     line-height: 140%
     margin-bottom: 32px
+    margin-top: 24px
 .hero__safe
     font-size: 16px 
     font-weight: 500
@@ -401,7 +406,6 @@ p
 .reviews__header-date 
     font-weight: 400
     color: #FEFAF5
-    opacity: 0.8
 .reviews__text
     text-align: right
 .reviews__item--reverse
@@ -422,15 +426,6 @@ p
     display: flex 
     justify-content: center
     align-items: center
-    span 
-        width: 3px 
-        height: 3px
-        border-radius: 50%
-        background: #141320
-        margin-left: 16px
-        margin-right: 16px
-        position:  relative
-        top: 2px
 .footer__menu-list 
     display: flex 
     justify-content: center 
@@ -438,6 +433,18 @@ p
     list-style: none 
     padding: 0
     margin: 0
+.footer__menu-separator
+    display: flex
+    align-items: center
+    span 
+        width: 3px 
+        height: 3px
+        border-radius: 50%
+        background: #141320
+        margin-left: 16px
+        margin-right: 16px
+        position: relative
+        top: 2px
 .footer__menu-link
     font-size: 16px 
     text-decoration: none
@@ -446,8 +453,8 @@ p
         color: $secondary-color
 .footer__menu-bottom-link 
     font-size: 16px 
-    color: #2E2323
-    opacity: 0.5
+    color: #828282
+    opacity: 1
 .footer__menu-bottom 
     display: flex 
     align-items: center
@@ -455,18 +462,21 @@ p
     padding-top: 32px
     a 
         text-decoration: none
-    span 
-        width: 3px 
-        min-width: 3px
-        height: 3px
-        background: #2E2323
-        opacity: 0.5
-        display: block 
-        border-radius: 50%
-        margin-left: 7px 
-        margin-right: 7px
-        position: relative
-        top: 2px
+    .footer__menu-separator
+        display: flex
+        align-items: center
+        span 
+            width: 3px 
+            min-width: 3px
+            height: 3px
+            background: #2E2323
+            opacity: 0.5
+            display: block 
+            border-radius: 50%
+            margin-left: 7px 
+            margin-right: 7px
+            position: relative
+            top: 2px
 .footer__line
     width: 400px 
     height: 1px 
@@ -479,12 +489,295 @@ p
 .footer__copyright 
     font-size: 16px 
     line-height: 140%
-    color: #2E2323
-    opacity: 0.5
+    color: #828282
     margin-top: 16px
 .footer__logo
     margin-bottom: 20px
 //end footer style
+
+//start about-us style
+.hero--about-us
+    text-align: center
+.about-hero__content
+    position: relative
+    z-index: 101
+.hero.hero--about-us
+    padding-top: 190px
+    .h1 
+        margin-bottom: 60px
+.hero-about-us__text 
+    font-size: 56px 
+    font-weight: 700
+    font-style: italic
+    line-height: 120%
+    font-family: $secondary-font
+    color: #FE6263
+    margin-bottom: 60px
+.hero-about-sub-text
+    width: 752px 
+    max-width: 100% 
+    margin-left: auto 
+    margin-right: auto
+    margin-bottom: 32px
+//end about-us style
+
+//start mission section style
+.h2--secondary
+    background: none
+    font-size: 56px
+    margin-bottom: 60px
+    padding-bottom: 0
+.mission-section
+    padding-top: 100px 
+    padding-bottom: 100px
+.mission-section__content 
+    width: 752px
+    max-width: 100%
+    margin-left: auto 
+    margin-right: auto
+    p 
+        font-weight: 400
+        line-height: 130%
+        text-align: center
+        margin-bottom: 15px
+.join-images-row 
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 60px
+.join-images-row
+    img 
+        object-fit: cover 
+        object-position: center
+        margin-left: 4px 
+        margin-right: 4px
+    img:first-child
+        width: 131px 
+        height: 158px
+        border-radius: 64px 32px 64px 32px  
+    img:nth-child(2)
+        width: 188px 
+        height: 333px
+        border-radius: 28px 106px 28px 106px
+    img:nth-child(3)
+        width: 397px 
+        height: 481px
+        border-radius: 0px 135px 48px 135px
+    img:nth-child(4)
+        width: 188px 
+        height: 333px
+        border-radius: 103px 27px 103px 27px 
+    img:nth-child(5)
+        width: 131px 
+        height: 158px
+        border-radius: 32px 0px  32px 63px
+.join-section__content
+    display: flex 
+    flex-direction: column
+    align-items: center
+.join-section 
+    padding-bottom: 86px
+.footer__logo
+    display: block
+//end mission section style
+
+//start contact-us style
+.hero.hero--contact-us
+    padding-top: 120px
+    padding-bottom: 0px
+    .h1 
+        margin-bottom: 0
+        position: relative
+        top: 55px
+.contact-item
+    display: flex 
+    align-items: center
+    width: 100%
+    border-radius: 40px 150px
+    border: 1px solid #F86812
+    background: linear-gradient(94deg, #EF4A75 1.54%, #FB3A49 50.96%, #FA795D 97.47%)
+    box-shadow: 1px 7px 9.5px 0 rgba(248, 21, 100, 0.13)
+    margin-bottom: 16px
+    padding: 24px
+    color: #fff
+.about-hero__content
+    max-width: 100%
+    margin-left: auto 
+    margin-right: auto
+.contact-icon
+    width: 48px 
+    height: 48px
+    border-radius: 100px
+    border: 1.6px solid rgba(255, 255, 255, 0.20)
+    background: linear-gradient(135deg, #FF3720 15.85%, #EB2852 92.58%)
+    box-shadow: 1.6px 1.6px 3.2px 0 rgba(246, 60, 36, 0.13), 9.6px 12px 27.2px 0 rgba(247, 71, 32, 0.23) 
+    display: flex 
+    justify-content: center 
+    align-items: center
+    margin-right: 16px
+.contact-us__content 
+    margin-bottom: 25px
+.contact-us__content-wrapper
+    width: 564px 
+    max-width: 100%
+    text-align: center
+    margin-left: auto 
+    margin-right: auto
+.contact-section 
+    padding-top: 50px 
+    padding-bottom: 100px
+.contact-us__content 
+    p 
+        margin-bottom: 20px
+.contact-us__sub-title 
+    margin-top: 40px
+    margin-bottom: 25px
+    font-weight: 700 
+    color: #141414
+.contact-us__sub-footer
+    font-size: 18px
+    color: rgba(20, 20, 20, 0.90)
+    line-height: 130%
+    margin-top: 48px
+//end contact-us style
+
+//start privacy-content style
+.privacy-content
+    padding-top: 30px 
+    padding-bottom: 100px
+.privacy-content 
+    h3 
+        font-size: 24px 
+        font-weight: 700
+    p 
+        line-height: 130%
+        margin-bottom: 20px
+.footer__menu-bottom
+    ul 
+        list-style: none
+        display: flex 
+        align-items: center
+        padding: 0 
+        margin: 0
+//end privacy-content style
+.hero.hero--about-us .h1
+    margin-bottom: 30px
+
+//start why telegram section style
+.why-telegram-section
+    padding-top: 60px 
+    padding-bottom: 60px
+.why-telegram__item-icon 
+    width: 120px 
+    height: 120px 
+    background: #FE6263
+    border-radius: 50%
+    display: flex 
+    justify-content: center 
+    align-items: center
+.why-telegram__item-content 
+    background: #D6E1EA
+    width: 650px 
+    max-width: 100%
+.why-telegram__item
+    display: flex 
+    align-items: flex-end
+.why-telegram__item-content 
+    text-align: left
+    margin-left: -40px
+    padding-top: 32px 
+    padding-bottom: 32px
+    padding-left: 83px
+    padding-right: 83px
+    border-radius: 150px 40px 150px 40px
+    .h3  
+        text-align: left
+.why-telegram__item-icon 
+    position: relative
+    z-index: 9
+.why-telegram__item-wrapper 
+    display: flex 
+    align-items: flex-end
+.why-telegram__item--reverse
+    display: flex 
+    justify-content: flex-end
+    .why-telegram__item-content 
+        margin-left: 0
+        position: relative
+        right: -40px
+.why-telegram__item 
+    padding-top: 40px
+.why-telegram__item--reverse
+    .why-telegram__item-content 
+        background: #FFC8C8
+.why-telegram__item
+    .h3
+        margin-bottom: 16px
+    .why-telegram__item-content
+        border-radius: 40px 150px 40px 150px
+.why-telegram-section
+    padding-bottom: 140px
+
+//end why telegram section style
+
+//start faq section style
+.faq__list
+    width: 850px 
+    max-width: 100% 
+    margin-left: auto 
+    margin-right: auto
+.faq__item-content 
+    background: #FFFFFF
+    padding: 100px 24px 40px 24px
+    margin-top: -80px
+    border-top-left-radius: 50px
+    padding-left: 70px 
+    padding-right: 70px
+    display: none
+    transition: all 0.3s ease-in-out
+    opacity: 0
+    transform: translateY(-10px)
+.faq__item-header
+    background: #FE6263
+    display: flex 
+    align-items: center 
+    justify-content: space-between
+    font-size: 44px 
+    font-family: $secondary-font
+    font-weight: 700
+    font-style: italic
+    line-height: 120%
+    color: #fff
+    padding: 32px 32px 32px 84px
+    border-radius: 170px 40px 150px 40px 
+    position:  relative
+    z-index: 10
+    cursor: pointer
+.faq__item 
+    margin-bottom: 32px
+.faq__item-icon 
+    margin-left: 15px
+.faq-section 
+    padding-bottom: 100px
+//end faq section style
+
+//start faq style
+.faq__item-icon
+    transition: all 0.3s ease-in-out
+.faq__item-content
+    border-bottom-right-radius: 140px
+    border-bottom-left-radius: 40px
+.faq__item.active 
+    .faq__item-content 
+        display: block
+        opacity: 1
+        transform: translateY(0)
+    .faq__item-icon
+        transform: rotate(-180deg)
+        transition: all 0.3s ease-in-out
+
+
+//end faq style
 
 @import "media"
 

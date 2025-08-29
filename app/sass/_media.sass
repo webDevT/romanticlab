@@ -43,6 +43,9 @@
 		.reviews__item-content
 			padding-left: 40px
 			padding-right: 20px
+	.join-section 
+		overflow: hidden
+	
 
 
 
@@ -106,6 +109,61 @@
 	.reviews .reviews__item
 		width: 100%
 		margin-bottom: 22px
+	.join-images-row
+		img
+			margin-left: 0.27vw
+			margin-right: 0.27vw
+		img:first-child
+			width: 12vw
+			height: 14.4vw
+			border-radius: 4vw 2vw 4vw 2vw
+		img:nth-child(3)
+			width: 36.53vw 
+			height: 44.53vw
+			border-radius: 0vw 8vw 2vw 8vw
+		img:nth-child(2)
+			width: 17.33vw
+			height: 30.67vw
+			border-radius: 2vw 10vw 3vw 10vw
+		img:nth-child(4)
+			width: 17.33vw
+			height: 30.67vw
+			border-radius: 0px 10vw 3vw 10vw
+		img:nth-child(5)
+			width: 12vw
+			height: 14.4vw
+			border-radius: 4vw 0vw 4vw 2vw
+	.hero.hero--contact-us .h1
+		top: 35px
+	.why-telegram__item .why-telegram__item-content
+		width: 80vw
+	.why-telegram__item-icon
+		width: 12.8vw
+		height: 12.8vw 
+		min-width: 12.8vw
+		img 
+			max-width: 45%
+	.why-telegram__item .why-telegram__item-content 
+		padding: 8.53vw 10vw
+		border-radius: 26.67vw 5.33vw 26.67vw 5.33vw
+	.why-telegram__item-content 
+		margin-left: 0
+	.why-telegram__item 
+		padding-top: 6.4vw
+	.why-telegram-section 
+		padding-top: 5vw
+	.why-telegram__item-content 
+		margin-left: -2vw
+	.hero.hero--why-telegram
+		.hero-about-us__text
+			br 
+				display: none
+	.faq__item-header
+		font-size: 34px
+		padding-left: 70px
+	
+
+		
 	
 	
 
@@ -121,11 +179,11 @@
 	.header__menu-button
 		display: block
 	.header__menu-row	
-		width: 30px
-		height: 3px
+		width: 24px
+		height: 2px
 		margin-bottom: 5px
 		border-radius: 20px
-		background-color: $font-color
+		background-color: #FA4F58
 		transition: all 0.3s ease
 	.header__menu-row:last-child 
 		margin-bottom: 0
@@ -147,23 +205,37 @@
 	.header.active
 		.container
 			background: rgba(255,255,255,1)
-			border-bottom-left-radius: 0
-			border-bottom-right-radius: 0
-			border-top-left-radius: 30px
-			border-top-right-radius: 30px
+			border-bottom-left-radius: 80px
+			border-bottom-right-radius: 80px
+			border-top-left-radius: 80px
+			border-top-right-radius: 80px
 			border: none
+			position: relative			
+	.header.active::before
+		content: ''
+		width: 89.87vw
+		height: 30px 
+		background: #ffdada 
+		bottom: 0 
+		left: 50% 
+		transform: translateX(-50%)
+		position: absolute
+		z-index: -1
 	.header__menu.active
 		display: block
 		position: absolute
 		position: absolute 
-		top: 100%
+		top: 101%
 		left: 0
 		width: 100% 
-		background: rgba(255,255,255,1)
+		background: #FFDADA
 		z-index: 99
 		padding-bottom: 60px
 		border-bottom-left-radius: 30px
 		border-bottom-right-radius: 30px
+	.header.active .container 
+		background: #FFEDED
+		border: 1px solid #fff
 	.header__menu-list 
 		flex-direction: column
 	.header__menu-list .header__menu-item 
@@ -216,11 +288,30 @@
 	.priorities__item .h3
 		margin-top: 24px
 		margin-bottom: 16px
+
 	
 	//end priorities section style
-	
-
-
+	.hero-about-us__text 
+		font-size: 44px
+	.header__menu-list .header__menu-item a
+		color: #000
+		font-family: $secondary-font
+		font-size: 26px
+		font-style: italic
+		font-weight: 700
+		line-height: 120%
+	.header__menu-list .header__menu-item
+		position: relative
+		padding-bottom: 25px
+	.header__menu-list .header__menu-item:after 
+		content: ''
+		width: 22px 
+		height: 2px 
+		background: #000
+		position: absolute 
+		bottom: 0
+		left: 50% 
+		transform: translateX(-50%)
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 530px)
 	/**/
@@ -248,23 +339,17 @@
 		img
 			width: 58vw
 	.header__menu-row
-		width: 7vw
-		height: 0.8vw
-		margin-bottom: 1.2vw
+		width: 6.4vw
+		height: 0.53vw
+		margin-bottom: 1.6vw
 		border-radius: 1.2vw
 	.header__menu-button.active
 		.header__menu-row:nth-child(1)
-			top: 1vw
+			top: 0.9vw
 		.header__menu-row:nth-child(3)
-			top: -0.8vw
-	.header.active
-		.container
-			border-top-left-radius: 5vw
-			border-top-right-radius: 5vw
+			top: -1.2vw
 	.header__menu.active
 		padding-bottom: 12vw
-		border-bottom-left-radius: 5vw
-		border-bottom-right-radius: 5vw
 	.header__menu-list .header__menu-item 
 		margin-top: 5vw 
 	//end header style
@@ -371,6 +456,79 @@
 		font-size: 4.27vw
 	.footer__logo 
 		margin-bottom: 5.33vw
+	//start about-us style
+	.hero-about-us__text 
+		font-size: 8.53vw
+	.hero-about-sub-text
+		font-size: 6.4vw
+	.hero.hero--about-us
+		padding-top: 38.4vw
+	.hero.hero--about-us .h1 
+		margin-bottom: 10.67vw
+	.hero-about-us__text 
+		margin-bottom: 10.67vw
+	.hero-about-sub-text 
+		line-height: 130%
+		margin-bottom: 10.67vw
+	.hero--about-us
+		padding-bottom: 8vw
+	.hero::after
+		border-radius: 0 0 55% 55%
+	.mission-section 
+		padding-top: 16vw
+		padding-bottom: 16vw
+	.mission-section .h2 
+		margin-bottom: 8.53vw
+	//end about-us style
+	.h2--secondary
+		margin-bottom: 0
+	.join-images-row
+		margin-bottom: 10.67vw
+	.hero.hero--contact-us 
+		padding-bottom: 2vw
+	.contact-item
+		font-size: 5.33vw
+	.contact-icon 
+		width: 12.8vw
+		min-width: 12.8vw
+		height: 12.88vw
+	.contact-icon 
+		margin-right: 4.27vw
+	.contact-item
+		padding: 6.4vw
+	.contact-us__sub-footer
+		margin-top: 12.8vw
+	.contact-us__sub-title 
+		margin-top: 12.8vw 
+		margin-bottom: 6.67vw
+	.contact-us__sub-footer 
+		font-size: 4.27vw
+	.header.active::before 
+		height: 20vw
+	.why-telegram__item .h3 
+		margin-bottom: 2.13vw
+	.why-telegram-section 
+		padding-bottom: 20vw
+	.faq__item-header
+		font-size: 6.93vw
+		border-radius: 40vw 10.67vw 40vw 10.67vw
+	.faq__item-header
+		padding: 6.4vw 8.53vw  6.4vw 15vw
+	.faq__item-icon
+		img
+			width: 6vw
+			min-width: 6vw
+	.faq-section 
+		padding-top: 8vw
+	.faq__item-content
+		padding: 28vw 6.4vw 10.67vw 6.4vw
+	.hero.hero--faq .h1 
+		margin-bottom: 0
+	.faq__item
+		margin-bottom: 6.4vw
+	.faq-section 
+		padding-bottom: 13.33vw
+
 
 
 
