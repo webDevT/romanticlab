@@ -27,3 +27,21 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 //end faq section
 
+
+//start sticky header on scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.header');
+    if (!header) return;
+
+    const updateSticky = () => {
+        if (window.scrollY > 0) {
+            header.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+        }
+    };
+
+    updateSticky();
+    window.addEventListener('scroll', updateSticky, { passive: true });
+});
+//end sticky header on scroll
