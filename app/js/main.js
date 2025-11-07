@@ -45,3 +45,22 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', updateSticky, { passive: true });
 });
 //end sticky header on scroll
+
+
+//start sticky cta on scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const ctaSection = document.querySelector('.cta-section');
+    if (!ctaSection) return;
+
+    const updateCtaSticky = () => {
+        if (window.scrollY > 250) {
+            ctaSection.classList.add('sticky');
+        } else {
+            ctaSection.classList.remove('sticky');
+        }
+    };
+
+    updateCtaSticky();
+    window.addEventListener('scroll', updateCtaSticky, { passive: true });
+});
+//end sticky cta on scroll
