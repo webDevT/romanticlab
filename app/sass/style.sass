@@ -884,6 +884,11 @@ p
     a
       color: #fff
       text-decoration: none
+      display: flex 
+      justify-content: center
+      align-items: center 
+      width: 100% 
+      height: 100%
 
 .title-text
   font-size: 30px
@@ -1131,7 +1136,34 @@ h3
     color: #fff
 .button--fixed
     display: none
+.agreement-btn
+  background: #ff3720
+  color: #fff
+  height: 48px
+  margin-left: auto
+  margin-right: auto
+  width: 200px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  border-radius: 50px
+  margin-top: 50px
+  cursor: pointer
 
+  &.active
+    background: #1b8127
+
+    &:after
+      content: "✓"
+      font-size: 22px
+      font-weight: 700
+      padding-left: 15px
 
 @import "media"
 

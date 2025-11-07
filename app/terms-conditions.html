@@ -681,7 +681,11 @@
 					<p>The date of the last change of the User Agreement is August 1, 2025.</p>
 
 					
-
+					<div class="agreement-btn">
+						<span>
+							I accept
+						</span>							
+					</div>
 
 
 
@@ -761,5 +765,13 @@
 <!-- end footer -->
 
 	<script src="js/main.js"></script>
+	<script>
+		document.querySelectorAll('.agreement-btn').forEach(function(button) {
+    button.addEventListener('click', function() {
+        this.classList.add('active');
+    });
+});
+
+	</script>
 </body>
 </html>
